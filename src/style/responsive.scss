@@ -1,0 +1,134 @@
+@media screen and (max-width: 1430px){
+  .pageTop{
+    margin-top: 10em !important;
+  }
+  //Servicec Masonry
+  .masonry-grid-change{
+    width: 1000px;
+  }
+}
+@media screen and (max-width: 1025px){
+  //----All page----
+  .page {
+    &_header {
+      h1 {
+        font-size: 45px;
+      }
+    }
+
+    &_description {
+      p {
+        font-size: 20px;
+      }
+    }
+    &_selectBtn {
+      .btn {
+        width: 200px;
+        height: 40px;
+        span{
+          font-size: 18px;
+        }
+      }
+    }
+  }
+  //Service masonry
+  .masonry-grid-change{
+    width: 800px;
+  }
+}
+@media screen and (max-width: 991px){
+  html, body{
+    height: 100%;
+  }
+  //Animate.css off
+  .animated {
+    /*CSS transitions*/
+    -o-transition-property: none !important;
+    -moz-transition-property: none !important;
+    -ms-transition-property: none !important;
+    -webkit-transition-property: none !important;
+    transition-property: none !important;
+    /*CSS transforms*/
+    -o-transform: none !important;
+    -moz-transform: none !important;
+    -ms-transform: none !important;
+    -webkit-transform: none !important;
+    transform: none !important;
+    /*CSS animations*/
+    -webkit-animation: none !important;
+    -moz-animation: none !important;
+    -o-animation: none !important;
+    -ms-animation: none !important;
+    animation: none !important;
+  }
+  //Navbar Off
+  .navbar{
+    display: none;
+  }
+  //Mobile navbar
+  .navbarMobile{
+    display: block !important;
+  }
+  //All pages parent div
+  .pageTop{
+    display: flex !important;
+    margin-top: 30px !important;
+    padding-bottom: 50px !important;
+  }
+  .pageCenter{
+    align-items: center !important;
+    height: 100vh !important;
+    margin: 0 !important;
+  }
+  //Col None
+  .forMobileDisplayNone{
+    display: none;
+  }
+  //Services - Masonry
+  .my-masonry-grid_column {
+    padding: 10px !important;
+  }
+  .masonry-grid-change{
+    width: calc(100% - 40px);
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 700px){
+  .my-masonry-grid_column{
+    padding: 0 !important;
+  }
+}
+
+@media screen and (max-width: 300px){
+  .navLinkMob {
+    width: 40px !important;
+    height: 40px !important;
+
+    .navLinkMob_icon {
+      width: 40px !important;
+      height: 40px !important;
+      display: flex;
+    }
+  }
+  .active{
+    .navLinkMob_icon{
+      font-size: 25px !important;
+    }
+  }
+}
+
+@media screen and (max-height: 550px){
+  .contactRHeight{
+    height: calc(100vh + 38vh) !important;
+  }
+}
+@media screen and (max-height: 360px){
+  .contactRHeight{
+    height: calc(100vh + 50vh) !important;
+  }
+}
+@media screen and (max-height: 300px){
+  .contactRHeight{
+    height: calc(100vh + 90vh) !important;
+  }
+}

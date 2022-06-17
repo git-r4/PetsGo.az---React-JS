@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins+Web&display=swap');
+
+html, body{
+    margin: 0;
+}
+*{
+    font-family: 'Poppins', sans-serif;
+}
+h1,h2,h3,h4,h5,h6,p{
+    margin: 0;
+    color: #623D5A;
+}
+a{
+    text-decoration: none;
+}
+
+//Masonry ------
+.my-masonry-grid {
+    display: -webkit-box; /* Not needed if autoprefixing */
+    display: -ms-flexbox; /* Not needed if autoprefixing */
+    display: flex;
+    margin-left: -30px; /* gutter size offset */
+    width: auto;
+}
+.my-masonry-grid_column {
+    padding-left: 30px; /* gutter size */
+    background-clip: padding-box;
+}
+
+/* Style your items */
+.my-masonry-grid_column > div { /* change div to reference your elements you put in <Masonry> */
+    background: #fff;
+    margin-bottom: 30px;
+}
+.masonry-grid-change{
+    width: 1120px;
+}
+/*------------------ Pages style HOME/ABOUT US/ ------------*/
+.pageTop{
+    margin-top: 20em;
+}
+.pageTopForAll{
+    margin-top: 15em;
+}
+
+.rowCentered{
+    display: flex;
+    align-items: center;
+}
+
+.page {
+    display: grid;
+    align-items: center;
+    grid-row-gap: 40px;
+
+    &_header {
+        h1 {
+            font-size: 5em;
+            font-weight: bold;
+        }
+    }
+
+    &_description {
+        p {
+            font-size: 1.5em;
+            font-weight: 500;
+        }
+    }
+    &_selectBtn{
+        .btn {
+            width: 230px;
+            height: 50px;
+            color: #623D5A;
+            cursor: pointer;
+            display: grid;
+            align-items: center;
+            border-radius: 40px;
+            position: relative;
+            transition: all 700ms ease;
+            span {
+                margin-top: 5px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                font-size: 20px;
+                font-weight: 500;
+                padding: 0 20px;
+                text-transform: uppercase;
+                z-index: 2;
+            }
+            &_blobs {
+                height: 100%;
+                overflow: hidden;
+                filter: url(#goo);
+                position: absolute;
+                top: 0;
+                left: -1px;
+                bottom: -3px;
+                right: -1px;
+                z-index: 1;
+                border-radius: 30px;
+                div {
+
+                    width: 34%;
+                    height: 100%;
+                    border-radius: 100%;
+                    position: absolute;
+                    transform: scale(1.4) translateY(125%) translateZ(0);
+                    transition: all 700ms ease;
+                    &:nth-child(1) {
+                        left: -6%;
+                    }
+
+                    &:nth-child(2) {
+                        left: 30%;
+                        transition-delay: 60ms;
+                    }
+
+                    &:nth-child(3) {
+                        left: 66%;
+                        transition-delay: 25ms;
+                    }
+                }
+            }
+            &:hover {
+                //Home
+                .homeColor{
+                    color: #fff;
+                    transition: 550ms;
+                }
+                //About Us
+                .aboutColor{
+                    color: #623D5A;
+                    transition: 550ms;
+                }
+
+                .btn_blobs {
+                    div {
+                        transform: scale(1.4) translateY(0) translateZ(0);
+                    }
+                }
+            }
+        }
+    }
+}
+.pageContent{
+    display: grid;
+    grid: repeat(2, 45%) / repeat(2, 35%);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    align-items: center;
+    justify-content: center;
+    &_btn{
+        border-radius: 40px;
+        background: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        -webkit-box-shadow: 0px 0px 10px -8px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 0px 10px -8px rgba(0,0,0,0.75);
+        box-shadow: 0px 0px 10px -8px rgba(0,0,0,0.75);
+        cursor: pointer;
+        transition: 250ms;
+        img{
+            border-radius: 40px;
+            width: 100%;
+            height: 100%;
+        }
+        &:hover{
+
+            transform: scale(1.05);
+            transition: 550ms;
+        }
+    }
+    &_btn:hover{
+        -webkit-box-shadow: 0px 0px 10px -2px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 0px 10px -2px rgba(0,0,0,0.75);
+        box-shadow: 0px 0px 10px -2px rgba(0,0,0,0.75);
+        transition: 250ms;
+    }
+
+}
+//Home-------------
+.homeColor{
+    color: #623D5A;
+    transition: 350ms;
+}
+.homeBorder{
+    border: 3px solid #623D5A;
+}
+.homeBackColor{
+    background-color: #623D5A;
+}
+
+//About Us----------
+.aboutColor{
+    color: #fff;
+    transition: 350ms;
+}
+.aboutBorder{
+    border: 3px solid #fff;
+    transition: 350ms;
+}
+.aboutBackColor{
+    background-color: #fff;
+}
+/*---------*/
+.lakiBox{
+    width: 100%;
+    height: 600px;
+    img{
+        width: 100%;
+        height: 100%;
+    }
+}
+//Service ---------
+.masonryCenter{
+    display: flex;
+    justify-content: center;
+}
+.service_content{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-row-gap: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 21px -6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 21px -6px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 21px -6px rgba(0,0,0,0.75);
+    transition: 450ms;
+    cursor: pointer;
+    &_img{
+        width: 119px;
+        height: 119px;
+        margin: 0 auto;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &_title{
+        display: grid;
+        grid-row-gap: 10px;
+        h4{
+            font-size: 18px;
+            text-align: center;
+        }
+        p{
+            text-align: center;
+            font-size: 16px;
+        }
+    }
+}
+.service_content:hover{
+    transform: scale(1.1);
+    transition: 350ms;
+}
+//Contact------------
+.formStyle{
+    display: grid;
+    grid-row-gap: 20px;
+    label{
+        display: grid;
+        grid-row-gap: 10px;
+        font-size: 16px;
+        color: #fff;
+        span{
+            color: #ff0033 !important;
+            font-size: 14px;
+        }
+        input{
+            font-size: 18px;
+            height: 40px;
+            border: none;
+            outline: none;
+            color: #623D5A;
+            border-radius: 7px;
+            padding: 5px 10px;
+        }
+        textarea{
+            font-size: 18px;
+            height: 100px;
+            border: none;
+            outline: none;
+            color: #623D5A;
+            border-radius: 7px;
+            padding: 10px;
+            resize: none;
+        }
+    }
+    div{
+        display: flex;
+        grid-column-gap: 20px;
+        align-items: center;
+        button{
+            width: 150px;
+            height: 40px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #623D5A;
+            border-radius: 7px;
+            border: none;
+            background-color: #e8e8e8;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: white;
+            transition: 250ms;
+        }
+        h3{
+            color: #fff;
+            font-size: 14px;
+        }
+    }
+
+}
+//blogs
+.blogs{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    text-align: center;
+}

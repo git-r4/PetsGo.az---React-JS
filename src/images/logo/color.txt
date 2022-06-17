@@ -1,0 +1,5 @@
+Color codes
+
+#623D5A (shape\dark)
+#FEE8EA (background\light)
+
